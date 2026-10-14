@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {validSeat,yuanToFen,normalizeMenu,demoRoom,total,suggestions} from '../lib/meme.ts';
+test('decimal yuan converts exactly into integer fen',()=>{assert.equal(yuanToFen('55.5'),5550);assert.equal(yuanToFen('0.01'),1);assert.equal(yuanToFen('25'),2500);for(const value of ['-1','1.234','NaN','Infinity','1e3',''])assert.throws(()=>yuanToFen(value));});
+test('official documentation example normalized without claiming live data',()=>{const rows=normalizeMenu({success:true,data:{meals:{'920215':{name:'培根安格斯厚牛堡大套餐',currentPrice:'55.5'}}}});assert.deepEqual(rows,[{code:'920215',name:'培根安格斯厚牛堡大套餐',priceFen:5550,source:'documentation-example'}]);assert.throws(()=>normalizeMenu({success:false}));});
+test('seat input rejects unknown products, duplicates and oversized captions',()=>{const s=demoRoom().a;assert.ok(validSeat(s));assert.equal(validSeat({...s,items:['unknown']}),false);assert.equal(validSeat({...s,items:['fries','fries']}),false);assert.equal(validSeat({...s,caption:'x'.repeat(91)}),false);assert.equal(validSeat({...s,name:' '}),false);assert.equal(validSeat(null),false);});
+test('demo totals stay in fen and captions respond to selected food',()=>{const r=demoRoom();assert.equal(total(r.a),1100);assert.equal(total(r.b),3600);assert.match(suggestions(r.a,'en')[0],/coffee/);assert.match(suggestions({...r.a,items:['fries']},'en')[0],/fries/);assert.equal(suggestions(r.a,'zh').length,3);});
