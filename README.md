@@ -1,85 +1,105 @@
-<p align="center"><img src="public/brand/logo.svg" width="360" alt="McMEME" /></p>
+<p align="center"><img src="public/brand/logo.svg" width="360" alt="McMEME 标志" /></p>
 
-<h1 align="center">Two trays. One inside joke.</h1>
-<p align="center"><strong>Your meal. Our meme. · 一起点餐，一起造梗。</strong></p>
-<p align="center">English + 简体中文 · Collaborative rooms · Original illustrations · PNG export</p>
+<h1 align="center">两份餐点，一个默契。</h1>
+<p align="center"><strong>一起点餐，一起造梗。</strong></p>
+<p align="center">简体中文 / 英文 · 双人协作 · 原创插画 · 高清 PNG 导出</p>
 
-![McMEME — English homepage](docs/mcmeme-desktop-en.png)
+![McMEME 中文首页](docs/mcmeme-desktop-zh.png)
 
-## Lunch becomes a shared story
+## 项目介绍
 
-One friend says “just a coffee.” The other brings burger-and-fries energy. McMEME turns that contrast into a tiny, co-authored comic: choose your food, write your line, approve together, and keep the moment.
+你说：“我就喝杯咖啡。”搭子说：“你的薯条，也是我们的薯条。”
 
-Built for friends, couples and coworkers who want a playful ritual around a shared lunch — even when they are in different cities.
+McMEME 是一个双人餐点表情图工作室。各自选择餐点，写下自己的台词，把一次普通午休变成只有你们懂的小漫画。两个人一起创作、一起确认，再把这一刻带走。
 
-**Status: working offline-data prototype. Real McDonald’s MCP integration and contest registration are pending.**
+适合朋友、情侣和同事：同桌吃饭可以玩，身处不同城市也可以共创。不需要绘画经验，选餐和聊天就是创作过程。
 
-[Hosted preview (owner-only sign-in)](https://mcmeme-studio-vonnyluis.erceiha.chatgpt.site) · [MCP integration status](MCP_INTEGRATION.md) · [Brand assets](public/brand)
+**当前状态：已实现基于演示数据的可运行原型；尚未接入真实麦当劳 MCP，尚未正式报名比赛。**
 
-## See it in action
+[在线预览（仅限所有者登录）](https://mcmeme-studio-vonnyluis.erceiha.chatgpt.site) · [MCP 接入说明](MCP_INTEGRATION.md) · [原创品牌素材](public/brand)
 
-These are real captures of the running prototype, not concept mockups. Menu and prices are demo data.
+## 界面展示
 
-![Chinese homepage](docs/mcmeme-desktop-zh.png)
-![Interactive meme studio](docs/mcmeme-studio-en.png)
+以下为实际运行截图，餐点和价格均为演示数据。
 
-<details><summary>A real exported meme — 1520 × 1380 PNG</summary>
+![中文造梗工作室](docs/mcmeme-studio-zh.png)
 
-<img src="docs/mcmeme-demo.png" width="640" alt="Exported two-person McMEME comic" />
+<details><summary>查看英文界面与实际导出图片</summary>
+
+![英文首页](docs/mcmeme-desktop-en.png)
+![英文工作室](docs/mcmeme-studio-en.png)
+
+<img src="docs/mcmeme-demo.png" width="640" alt="实际导出的双人漫画，尺寸为 1520 × 1380" />
 
 </details>
 
-## Try the story
+## 体验流程
 
-1. Open the local app and choose **Try solo demo**.
-2. Give seat A coffee, seat B a burger and fries.
-3. Pick a suggested line or write your own; switch between The duo, The receipt and The plot twist.
-4. Approve both sides and download the PNG.
-5. For real collaboration, create a table and send its one-use invitation to a second browser participant. Both participants need access to the same deployment.
+1. 打开应用，切换至「中文」，点击「先玩单人版」。
+2. 给 A 座选一杯咖啡，给 B 座选汉堡和薯条。
+3. 使用「借个灵感」中的文案，或写下自己的台词并保存。
+4. 在「双人对话」「默契小票」「剧情反转」之间选择喜欢的版式。
+5. 分别确认两边内容，下载高清 PNG。
+6. 想与朋友一起玩？创建双人餐桌，将一次性邀请链接发给搭子。双方须能访问同一部署地址。
 
-## Project
+## 已实现功能
 
-**Your meal. Our meme. / 一起点餐，一起造梗。**
+- **单人体验：** 自由编辑两个座位的餐盘和台词，尝试三种版式。
+- **双人房间：** 独立座位凭证、轮询同步、D1 服务端持久化。
+- **文案灵感：** 根据餐盘匹配原创规则库，无需大模型或 API 密钥。
+- **共同确认：** 双方确认后才能导出；保存内容或更换版式会重置双方确认状态。
+- **高清导出：** 生成 1520 × 1380 PNG，内嵌本地 SVG 插画。
+- **双语与适配：** 简体中文和英文、响应式布局、弹窗键盘焦点管理、减少动态效果支持。
 
-A two-person food-meme studio with an original comic-zine identity. English and Simplified Chinese. This is an independent, token-free prototype, not an official McDonald's product or a contest submission.
+## 演示数据与真实接口的区别
 
-## What works
-- Solo playground: edit both trays, captions, and three visual formats.
-- Shared rooms: invite a second participant, separate seat credentials, polling synchronization, server-side persistence in D1.
-- Caption suggestions selected deterministically from an original library according to tray contents. No LLM/API key needed.
-- Separate approval from each participant. Every saved content/layout change resets both approvals.
-- PNG download at 1520 x 1380 with all local SVG illustrations embedded.
-- Responsive layout, keyboard focus trap for dialogs, reduced-motion support.
+当前六种餐点及价格均为自建演示数据。城市仅用于故事展示，不代表真实门店搜索结果。应用不会调用麦当劳实时服务，不会下单、支付或领取优惠券，也不声称提供实时库存。
 
-## Demo versus real
-All six menu products and prices are illustrative, synthetic fixtures. City choices are storytelling labels, not actual restaurant searches. No McDonald's credentials, live calls, ordering, payment, coupon redemption or inventory claims. The response adapter follows the public MCP documentation and is tested against an extracted example. See MCP_INTEGRATION.md.
+已根据公开文档实现餐品响应格式转换，并使用文档示例测试。**格式兼容不等于真实 MCP 接入。** 接入范围与后续流程详见 [MCP_INTEGRATION.md](MCP_INTEGRATION.md)。
 
-## Local development
-Node 22.13+ and npm required. On Windows use Node 24+ for the included TypeScript-stripping tests.
+## 本地运行
 
-1. `npm run install:ci`
-2. `npm run build`
-3. `node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_careless_the_executioner.sql` (once per local database)
-4. `npm run dev`
-5. Open http://127.0.0.1:5173
+需要 Node.js 22.13+ 和 npm。Windows 建议使用 Node.js 24+，以运行项目内直接读取 TypeScript 的测试。
 
-If a Windows npm shim resolves incorrectly, invoke `node "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js" run install:ci`, then `node scripts/run-framework.mjs build` or `dev` directly.
+1. 安装依赖：`npm run install:ci`
+2. 构建项目：`npm run build`
+3. 初始化本地数据库（每个本地数据库执行一次）：
 
-## Checks
-- `node --test tests/core.test.mjs`
-- `node tests/rooms.integration.mjs` (requires local preview and migrated DB)
-- `node node_modules/typescript/bin/tsc --noEmit`
+```sh
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_careless_the_executioner.sql
+```
 
-## Shared-room access
-A room expires after 7 days. Access uses random opaque tokens; only SHA-256 hashes are stored server-side. The invite token is one-use and appears in the URL fragment. Each participant can change only their own seat; either can change format, resetting approval. Updates use optimistic revision checks. Credentials are retained in sessionStorage, so use the original tab/browser session to resume. Expiry disables access; it does not promise physical erasure of stored records.
+4. 启动：`npm run dev`
+5. 浏览器打开 http://127.0.0.1:5173
 
-Hosting is owner-private by default. A room invitation does not bypass the Site access policy. External friend testing needs a separately approved hosting-audience change. Local tests exercise two independent participant sessions. Before a public launch add abuse throttling, retention cleanup and review the public access policy.
+若 Windows 上的 npm 启动脚本解析异常，可使用 `node "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js" run install:ci` 安装依赖，再直接运行 `node scripts/run-framework.mjs build` 或 `node scripts/run-framework.mjs dev`。
 
-## Brand
-Original SVG wordmark, speech-bubble mark, six illustrated food characters and brand poster: `public/brand`. Colors: tomato #e53726, butter #ffcf32, paper #fff8e8, ink #29251f, mint #b6d8bf. Typography: Space Grotesk + DM Sans with local system fallbacks. Font download is optional; the application and PNG export do not depend on it.
+## 验证方式
 
-## 中文
-McMEME 是双人餐点表情图工作室。选餐、写台词、双方确认后导出 PNG。支持单人体验和真实双人房间。当前菜单、价格和城市均用于演示，不代表实时门店供应，不会下单或支付。文案来自原创规则库，无需大模型密钥。项目尚未接入真实麦当劳 MCP，也尚未报名比赛。
+```sh
+node --test tests/core.test.mjs
+node tests/rooms.integration.mjs
+node node_modules/typescript/bin/tsc --noEmit
+```
 
-## License
-Original McMEME code and artwork are MIT licensed. Bundled third-party components retain their own licenses; see THIRD_PARTY_NOTICES.md. McDonald’s names and marks remain their owners’ property.
+房间集成测试需要先启动本地服务并完成数据库初始化。测试覆盖金额转换、数据校验、两人加入与同步、一次性邀请、座位权限、版本冲突及确认状态重置。已人工检查 PNG 导出和移动端布局。
+
+## 房间访问与数据说明
+
+房间有效期为 7 天。访问凭证为随机令牌，服务端仅保存 SHA-256 摘要。邀请令牌放在链接片段中，只能使用一次。参与者只能修改自己的座位，双方均可更换版式；修改会重置确认状态。更新通过版本号检查避免相互覆盖。
+
+凭证保存在 sessionStorage 中；恢复会话需使用原浏览器标签页。到期后禁止访问，但目前不自动物理删除数据库记录。
+
+当前在线预览仅限所有者访问，房间邀请不会绕过网站访问权限。本地测试已验证两个独立参与者会话。面向公众开放前，还需加入请求限流、过期记录清理并检查访问策略。
+
+## 视觉设计
+
+品牌以漫画小刊物为灵感：番茄红、奶油黄、纸张底色、墨色描边和薄荷绿，搭配原创食物角色与对话气泡。
+
+`public/brand` 包含原创 SVG 字标、气泡标志、六个食物角色和品牌海报。主色为 `#e53726`、`#ffcf32`、`#fff8e8`、`#29251f`、`#b6d8bf`。字体使用 Space Grotesk、DM Sans 及系统回退字体；外部字体不可用时，应用和图片导出仍可运行。
+
+## 开源许可与声明
+
+McMEME 原创代码与插画采用 [MIT 许可证](LICENSE)。第三方组件保留各自许可，详见 [第三方说明](THIRD_PARTY_NOTICES.md)。标准许可证原文保留英文。
+
+本项目为独立创意原型，非麦当劳官方产品，与麦当劳无隶属或背书关系。相关商标属于各自权利人。
