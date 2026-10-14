@@ -1,4 +1,4 @@
-<p align="center"><img src="public/brand/mcmeme-logo-500.png" width="320" height="320" alt="McMEME 标志" /></p>
+<p align="center"><img src="public/brand/mcmeme-logo-arches-500.png" width="320" height="320" alt="McMEME 标志" /></p>
 
 <h1 align="center">两份餐点，一个默契。</h1>
 <p align="center"><strong>一起点餐，一起造梗。</strong></p>

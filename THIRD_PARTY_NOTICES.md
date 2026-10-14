@@ -9,4 +9,4 @@ McMEME 基于 Sites Vinext 项目模板开发，使用 React、Vinext、Vite、C
 - `build/sites-vite-plugin.LICENSE`
 - `vendor/shadcn-tailwind-4.13.0.LICENSE.md`
 
-食物插画、对话气泡标志与 McMEME 页面设计为项目原创素材。项目未附带麦当劳官方食物照片或金拱门标志，不授予麦当劳商标使用许可。可选 Google Fonts 字体适用各自的字体许可证。标准许可文本保留原文，以避免翻译改变其含义。
+食物插画、对话气泡标志与 McMEME 页面设计为项目原创素材。项目未附带麦当劳官方食物照片。新版展示图使用金色双拱门视觉元素，相关麦当劳商标权利仍属于其权利人，不属于本项目 MIT 许可范围，也不代表官方授权或背书。可选 Google Fonts 字体适用各自的字体许可证。标准许可文本保留原文，以避免翻译改变其含义。
