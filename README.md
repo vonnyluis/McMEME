@@ -14,7 +14,7 @@ McMEME 是一个双人餐点表情图工作室。各自选择餐点，写下自�
 
 适合朋友、情侣和同事：同桌吃饭可以玩，身处不同城市也可以共创。不需要绘画经验，选餐和聊天就是创作过程。
 
-**当前状态：已实现基于演示数据的可运行原型；尚未接入真实麦当劳 MCP，尚未正式报名比赛。**
+**当前状态：已实现基于演示数据的可运行原型；尚未接入真实麦当劳 MCP；已提交报名申请，等待主办方重新审核，不代表已通过资格审核。**
 
 [在线预览（仅限所有者登录）](https://mcmeme-studio-vonnyluis.erceiha.chatgpt.site) · [MCP 接入说明](MCP_INTEGRATION.md) · [原创品牌素材](public/brand)
 
@@ -103,3 +103,12 @@ node node_modules/typescript/bin/tsc --noEmit
 McMEME 原创代码与插画采用 [MIT 许可证](LICENSE)。第三方组件保留各自许可，详见 [第三方说明](THIRD_PARTY_NOTICES.md)。标准许可证原文保留英文。
 
 本项目为独立创意原型，非麦当劳官方产品，与麦当劳无隶属或背书关系。相关商标属于各自权利人。
+
+## 参赛资料
+
+- [报名申请 #708](https://github.com/M-China/mcd-developer-innovation-challenge/issues/708)
+- [官方参赛声明](CONTEST_DECLARATION.md)（按官方原文保留）
+- [MCP 接入说明与当前状态](MCP_INTEGRATION.md)
+- [脱敏配置示例](mcp-config.example.json)
+
+已根据审核反馈补充声明文件；真实 MCP 接入尚未完成，参赛资格以主办方审核为准。
